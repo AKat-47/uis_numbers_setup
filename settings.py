@@ -244,7 +244,7 @@ SCENARIO_NAME = os.environ["SCENARIO_NAME"]
 RULE_NAME = os.environ["RULE_NAME"]
 
 print(virtual_numbers)
-work_mode = int(input("1 - настройка и добавление, 2 - удаление, 3 - добавление в правило: "))
+work_mode = int(input("1 - настройка, 2 - удаление, 3 - добавление в правило: "))
 
 PROFILE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "chrome_profile")
 
@@ -273,7 +273,7 @@ try:
     elif work_mode == 3:
         result = add_in_rule_mode(driver, wait, virtual_numbers)
     else:
-        print('ввел хуйню')
+        print('Некорректный режим работы')
 
 
 finally:
